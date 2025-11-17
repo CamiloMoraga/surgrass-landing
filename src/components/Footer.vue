@@ -1,15 +1,15 @@
 <template>
   <footer class="footer">
-    <p>© 2025 Surgrass. Todos los derechos reservados.</p>
+    <p>© {{ new Date().getFullYear() }} Surgrass — Todos los derechos reservados</p>
   </footer>
 </template>
 
 <style scoped>
 .footer {
+  background: #f5f5f5;
   text-align: center;
-  padding: 2rem 0;
-  background: #0b4d26;
-  color: white;
-  margin-top: 4rem;
+  padding: 25px 0;
+  margin-top: 40px;
+  color: #555;
 }
 </style>

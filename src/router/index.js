@@ -1,20 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router'
-
-import HeroSection from '../components/HeroSection.vue'
-import ServicesSection from '../components/ServicesSection.vue'
-import GallerySection from '../components/GallerySection.vue'
-import ContactForm from '../components/ContactForm.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../views/Home.vue';
 
 const routes = [
-    { path: '/', component: HeroSection },
-    { path: '/servicios', component: ServicesSection },
-    { path: '/galeria', component: GallerySection },
-    { path: '/contacto', component: ContactForm }
-]
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    }
+];
 
 const router = createRouter({
     history: createWebHistory(),
     routes
-})
+});
 
-export default router
+export default router;
