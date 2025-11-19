@@ -1,10 +1,341 @@
-body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    color: #333;
-    scroll-behavior: smooth;
+/* --------------------------------------------------
+   Tipografías Google Fonts
+   -------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --------------------------------------------------
+   Variables globales Surgrass
+   -------------------------------------------------- */
+:root {
+    /* Colores base */
+    --sg-color-primary: #2d7a3d;
+    --sg-color-primary-dark: #1f5a2b;
+    --sg-color-primary-soft: #e8f5ec;
+
+    --sg-color-accent: #f59e0b;
+
+    --sg-color-bg: #f9fafb;
+    --sg-color-surface: #ffffff;
+    --sg-color-surface-alt: #f3f4f6;
+
+    --sg-color-text: #111827;
+    --sg-color-text-muted: #6b7280;
+    --sg-color-border: #e5e7eb;
+
+    /* Tipografía */
+    --sg-font-heading: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --sg-font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Tamaños de texto */
+    --sg-text-xs: 0.75rem;
+    --sg-text-sm: 0.875rem;
+    --sg-text-base: 1rem;
+    --sg-text-lg: 1.125rem;
+    --sg-text-xl: 1.25rem;
+    --sg-text-2xl: 1.5rem;
+    --sg-text-3xl: 1.875rem;
+    --sg-text-4xl: 3rem;
+
+    /* Espaciado */
+    --sg-spacing-xs: 0.5rem;
+    --sg-spacing-sm: 0.75rem;
+    --sg-spacing-md: 1.5rem;
+    --sg-spacing-lg: 2.5rem;
+    --sg-spacing-xl: 4rem;
+
+    --sg-section-y: 6rem; /* padding vertical de secciones */
+
+    /* Bordes y sombras */
+    --sg-radius-sm: 0.5rem;
+    --sg-radius-md: 1rem;
+    --sg-radius-pill: 999px;
+
+    --sg-shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
 }
 
-section {
-    padding: 80px 20px;
+/* --------------------------------------------------
+   Reset básico
+   -------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--sg-font-body);
+    font-size: var(--sg-text-base);
+    color: var(--sg-color-text);
+    background-color: var(--sg-color-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Quitamos márgenes por defecto en títulos y párrafos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* Enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------------------------------------
+   Utilidades de layout
+   -------------------------------------------------- */
+
+/* Contenedor central */
+.sg-container {
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 1.25rem; /* ~20px */
+}
+
+/* Sección genérica */
+.sg-section {
+    padding-block: var(--sg-section-y);
+}
+
+.sg-section--light {
+    background-color: var(--sg-color-bg);
+}
+
+.sg-section--surface {
+    background-color: var(--sg-color-surface);
+}
+
+/* Títulos de sección */
+.sg-section-header {
+    text-align: center;
+    margin-bottom: var(--sg-spacing-lg);
+}
+
+.sg-section-eyebrow {
+    font-size: var(--sg-text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--sg-color-primary);
+    font-weight: 600;
+    margin-bottom: var(--sg-spacing-xs);
+}
+
+.sg-section-title {
+    font-family: var(--sg-font-heading);
+    font-size: var(--sg-text-3xl);
+    font-weight: 600;
+    color: var(--sg-color-text);
+    margin-bottom: var(--sg-spacing-sm);
+}
+
+.sg-section-subtitle {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: var(--sg-text-base);
+    color: var(--sg-color-text-muted);
+}
+
+/* --------------------------------------------------
+   Botones
+   -------------------------------------------------- */
+.sg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--sg-radius-pill);
+
+    font-family: var(--sg-font-heading);
+    font-size: var(--sg-text-sm);
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+}
+
+.sg-btn:active {
+    transform: translateY(1px);
+}
+
+/* Botón primario */
+.sg-btn--primary {
+    background-color: var(--sg-color-primary);
+    color: #ffffff;
+    box-shadow: var(--sg-shadow-soft);
+}
+
+.sg-btn--primary:hover {
+    background-color: var(--sg-color-primary-dark);
+}
+
+/* Botón secundario (outline) */
+.sg-btn--outline {
+    background-color: transparent;
+    color: var(--sg-color-primary-dark);
+    border-color: var(--sg-color-primary-soft);
+    background-color: rgba(45, 122, 61, 0.04);
+}
+
+.sg-btn--outline:hover {
+    border-color: var(--sg-color-primary);
+    background-color: rgba(45, 122, 61, 0.08);
+}
+
+/* Botón de acento (por si lo necesitas luego) */
+.sg-btn--accent {
+    background-color: var(--sg-color-accent);
+    color: #111827;
+}
+
+.sg-btn--accent:hover {
+    filter: brightness(0.95);
+}
+
+/* --------------------------------------------------
+   Navbar baseline (clase genérica, detalles en el componente)
+   -------------------------------------------------- */
+.sg-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(16px);
+    background-color: rgba(249, 250, 251, 0.9);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.sg-navbar-inner {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------------
+   Hero baseline
+   -------------------------------------------------- */
+.sg-hero {
+    min-height: calc(100vh - 72px); /* alto pantalla menos navbar */
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.sg-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            120deg,
+            rgba(15, 23, 42, 0.82),
+            rgba(15, 23, 42, 0.45)
+    );
+}
+
+.sg-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+}
+
+.sg-hero-eyebrow {
+    font-size: var(--sg-text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--sg-color-primary-soft);
+    margin-bottom: var(--sg-spacing-xs);
+    font-weight: 600;
+}
+
+.sg-hero-title {
+    font-family: var(--sg-font-heading);
+    font-size: var(--sg-text-4xl);
+    line-height: 1.1;
+    margin-bottom: var(--sg-spacing-md);
+}
+
+.sg-hero-subtitle {
+    font-size: var(--sg-text-lg);
+    color: #e5e7eb;
+    margin-bottom: var(--sg-spacing-lg);
+}
+
+/* --------------------------------------------------
+   Footer baseline
+   -------------------------------------------------- */
+.sg-footer {
+    background-color: #020617;
+    color: #9ca3af;
+    padding-block: 2.5rem;
+}
+
+.sg-footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.sg-footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.3);
+    padding-top: 1.5rem;
+    font-size: var(--sg-text-sm);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sg-footer-logo {
+    font-family: var(--sg-font-heading);
+    font-size: var(--sg-text-xl);
+    font-weight: 600;
+    color: #f9fafb;
+}
+
+/* Responsivo básico */
+@media (max-width: 768px) {
+    .sg-section {
+        padding-block: 3.5rem;
+    }
+
+    .sg-hero-title {
+        font-size: 2.25rem;
+    }
+
+    .sg-hero-subtitle {
+        font-size: var(--sg-text-base);
+    }
+
+    .sg-footer-top {
+        align-items: flex-start;
+    }
 }

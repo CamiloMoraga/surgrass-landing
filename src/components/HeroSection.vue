@@ -1,47 +1,110 @@
 <template>
-  <section id="inicio" class="hero">
-    <div class="overlay">
-      <h1>Control de Praderas y Análisis de Suelo</h1>
-      <p>Soluciones modernas para la gestión agrícola en el sur de Chile.</p>
-      <a href="#contacto" class="btn">Contáctanos</a>
+  <section id="top" class="sg-hero hero">
+    <!-- Fondo imagen, ahora con :style -->
+    <div class="hero-bg" :style="heroBgStyle" />
+
+    <!-- Capa de degradado -->
+    <div class="sg-hero-overlay"></div>
+
+    <div class="sg-container">
+      <div class="sg-hero-content">
+        <div class="sg-hero-eyebrow">
+          Tecnología aplicada a praderas del sur de Chile
+        </div>
+
+        <h1 class="sg-hero-title">
+          Control inteligente de praderas,
+          <span class="hero-title-highlight">análisis de suelo y forraje</span>.
+        </h1>
+
+        <p class="sg-hero-subtitle">
+          Surgrass integra monitoreo en terreno, análisis de laboratorio y mapas
+          de colorimetría para ayudarte a tomar mejores decisiones sobre tus
+          praderas, con foco en productividad y sustentabilidad.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#servicios" class="sg-btn sg-btn--primary">
+            Ver soluciones para mi campo
+          </a>
+
+          <a
+              href="https://app.surgrass.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sg-btn sg-btn--outline"
+          >
+            Ir al sistema Surgrass
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>✓ Enfocados en el sur de Chile</span>
+          <span>✓ Mapas y reportes técnicos claros</span>
+          <span>✓ Acompañamiento cercano al productor</span>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
+<script setup>
+import heroBg from '@/assets/img/hero-section.jpeg';
+
+// Creamos un estilo reactivo para el fondo
+const heroBgStyle = {
+  backgroundImage: `url(${heroBg})`,
+};
+</script>
+
 <style scoped>
 .hero {
-  height: 85vh;
-  background: url('../assets/img/login-bg.jpeg') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.45);
-  color: white;
-  text-align: center;
-  padding: 30px;
-  border-radius: 10px;
+/* Fondo con imagen (ya no usamos url() aquí) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: saturate(1.05) contrast(1.02);
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
+/* Highlight de una parte del título */
+.hero-title-highlight {
+  color: var(--sg-color-primary-soft);
 }
 
-p {
-  font-size: 18px;
-  margin-bottom: 25px;
+/* Botones del hero */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.btn {
-  background: #3a7d44;
-  color: white;
-  padding: 12px 28px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
+/* Meta info (bullets pequeños) */
+.hero-meta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: var(--sg-text-sm);
+  color: #e5e7eb;
+}
+
+.hero-meta span {
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--sg-radius-pill);
+  background-color: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-meta {
+    flex-direction: column;
+  }
 }
 </style>
