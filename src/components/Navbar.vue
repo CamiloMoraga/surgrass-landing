@@ -11,9 +11,9 @@
 
       <!-- Menú desktop -->
       <nav class="navbar-nav" aria-label="Main navigation">
+        <a href="#nosotros" class="navbar-link">Quiénes somos</a>
         <a href="#servicios" class="navbar-link">Servicios</a>
         <a href="#galeria" class="navbar-link">Galería</a>
-        <a href="#nosotros" class="navbar-link">Quiénes somos</a>
         <a href="#contacto" class="navbar-link">Contacto</a>
       </nav>
 
@@ -22,25 +22,26 @@
           class="navbar-toggle"
           type="button"
           @click="isOpen = !isOpen"
-          aria-label="Abrir menú de navegación"
+          aria-label="Abrir menú"
       >
-        <span :class="['bar', { 'bar--active': isOpen }]"></span>
-        <span :class="['bar', { 'bar--active': isOpen }]"></span>
+        <span class="bar bar-top"></span>
+        <span class="bar bar-middle"></span>
+        <span class="bar bat-bottom"></span>
       </button>
     </div>
 
     <!-- Menú móvil -->
-    <transition name="fade-down">
+    <transition name="fade-slide-y">
       <div v-if="isOpen" class="navbar-mobile">
         <nav class="navbar-mobile-nav">
+          <a href="#nosotros" class="navbar-mobile-link" @click="close">
+            Quiénes somos
+          </a>
           <a href="#servicios" class="navbar-mobile-link" @click="close">
             Servicios
           </a>
           <a href="#galeria" class="navbar-mobile-link" @click="close">
             Galería
-          </a>
-          <a href="#nosotros" class="navbar-mobile-link" @click="close">
-            Quiénes somos
           </a>
           <a href="#contacto" class="navbar-mobile-link" @click="close">
             Contacto
@@ -123,43 +124,49 @@ const close = () => {
   width: 100%;
 }
 
-/* Hamburguesa (móvil) */
+/* ------------------------------------
+   Botón hamburguesa minimalista
+   ------------------------------------ */
+
 .navbar-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
+  width: 32px;       /* más pequeño */
+  height: 32px;      /* más pequeño */
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.3);
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
   padding: 0;
   margin-left: 1rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;          /* barras más juntas */
+  -webkit-tap-highlight-color: transparent;
 }
 
-.navbar-toggle .bar {
-  position: relative;
-  width: 18px;
-  height: 2px;
+.navbar-toggle:focus,
+.navbar-toggle:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggle::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/* Barras más pequeñas */
+.bar {
+  width: 18px;       /* antes 24px → ahora más delicado */
+  height: 2px;       /* antes 3px → más fino */
   background-color: #111827;
   border-radius: 999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.navbar-toggle .bar + .bar {
-  margin-top: 5px;
-}
-
-.bar--active:first-child {
-  transform: translateY(3.5px) rotate(45deg);
-}
-
-.bar--active:last-child {
-  transform: translateY(-3.5px) rotate(-45deg);
-}
 
 /* Menú móvil */
 .navbar-mobile {
+  backdrop-filter: blur(6px);
   border-top: 1px solid var(--sg-color-border);
   background-color: #ffffff;
 }
@@ -176,16 +183,16 @@ const close = () => {
   color: var(--sg-color-text);
 }
 
-/* Animación */
-.fade-down-enter-active,
-.fade-down-leave-active {
-  transition: opacity 0.15s ease, transform 0.15s ease;
+/* Animación suave de entrada/salida */
+.fade-slide-y-enter-active,
+.fade-slide-y-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.fade-down-enter-from,
-.fade-down-leave-to {
+.fade-slide-y-enter-from,
+.fade-slide-y-leave-to {
   opacity: 0;
-  transform: translateY(-4px);
+  transform: translateY(-10px);
 }
 
 /* Responsivo */
