@@ -17,7 +17,6 @@ export default defineConfig({
             '@router': fileURLToPath(new URL('./src/router', import.meta.url)),
             '@styles': fileURLToPath(new URL('./src/assets/css', import.meta.url)),
             '@img': fileURLToPath(new URL('./src/assets/img', import.meta.url)),
-            '@videos': fileURLToPath(new URL('./src/assets/videos', import.meta.url)),
         },
     },
 

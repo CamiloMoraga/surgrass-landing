@@ -23,7 +23,6 @@
             <h3 class="footer-heading">Enlaces</h3>
             <p class="footer-text">
               <a href="#servicios">Servicios</a><br />
-              <a href="#galeria">Galería</a><br />
               <a href="#nosotros">Quiénes somos</a><br />
               <a href="#contacto">Contacto</a>
             </p>

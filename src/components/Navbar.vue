@@ -13,7 +13,6 @@
       <nav class="navbar-nav" aria-label="Main navigation">
         <a href="#nosotros" class="navbar-link">Quiénes somos</a>
         <a href="#servicios" class="navbar-link">Servicios</a>
-        <a href="#galeria" class="navbar-link">Galería</a>
         <a href="#contacto" class="navbar-link">Contacto</a>
       </nav>
 
@@ -39,9 +38,6 @@
           </a>
           <a href="#servicios" class="navbar-mobile-link" @click="close">
             Servicios
-          </a>
-          <a href="#galeria" class="navbar-mobile-link" @click="close">
-            Galería
           </a>
           <a href="#contacto" class="navbar-mobile-link" @click="close">
             Contacto
