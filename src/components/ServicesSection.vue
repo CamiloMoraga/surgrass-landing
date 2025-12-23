@@ -29,7 +29,7 @@
             rel="noopener noreferrer"
             class="sg-btn sg-btn--primary"
         >
-          Ingresar al sistema Surgrass
+          Ingresar al sistema Solution+
         </a>
       </div>
     </div>
@@ -102,6 +102,17 @@ const services = [
       <svg width="40" height="40" fill="none" stroke="#2d7a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M6 30V10a2 2 0 012-2h12l10 10v12a2 2 0 01-2 2H8a2 2 0 01-2-2z"/>
         <path d="M20 8v10h10"/>
+      </svg>
+    `,
+  },
+  {
+    title: "Lavado Industrial",
+    desc:
+        "Servicio de lavado y sanitización industrial de instalaciones, equipos y superficies.",
+    icon: `
+      <svg width="40" height="40" fill="none" stroke="#2d7a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="20" cy="12" r="9"/>
+        <path d="M4 34c0-6 7-10 16-10s16 4 16 10"/>
       </svg>
     `,
   },

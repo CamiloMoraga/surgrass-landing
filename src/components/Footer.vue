@@ -3,7 +3,7 @@
     <div class="sg-container">
       <div class="sg-footer-top">
         <div>
-          <div class="sg-footer-logo">Surgrass</div>
+          <div class="sg-footer-logo">Solution+</div>
           <p class="footer-text">
             Soluciones integrales para el manejo de praderas, análisis de suelo
             y forraje, con foco en productores del sur de Chile.

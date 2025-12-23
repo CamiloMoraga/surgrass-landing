@@ -18,9 +18,8 @@
         </h1>
 
         <p class="sg-hero-subtitle">
-          Surgrass integra monitoreo en terreno, análisis de laboratorio y mapas
-          de colorimetría para ayudarte a tomar mejores decisiones sobre tus
-          praderas, con foco en productividad y sustentabilidad.
+          Soluciones integrales para el control praderil, lavado industrial y
+          gestión digital de análisis de suelo y forraje.
         </p>
 
         <div class="hero-actions">
@@ -29,12 +28,12 @@
           </a>
 
           <a
-              href="https://app.surgrass.cl"
+              href="https://app.solution+.cl"
               target="_blank"
               rel="noopener noreferrer"
-              class="sg-btn sg-btn--outline"
+              class="sg-btn sg-btn--primary"
           >
-            Ir al sistema Surgrass
+            Ir al sistema Solution+
           </a>
         </div>
 

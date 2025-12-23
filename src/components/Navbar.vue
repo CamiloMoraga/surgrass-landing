@@ -5,7 +5,7 @@
       <div class="navbar-left">
         <a href="#top" class="navbar-logo">
           <span class="navbar-logo-mark"></span>
-          <span class="navbar-logo-text">Surgrass</span>
+          <span class="navbar-logo-text">Solution+</span>
         </a>
       </div>
 

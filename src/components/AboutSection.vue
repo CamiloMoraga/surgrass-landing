@@ -7,25 +7,34 @@
         <div class="sg-section-eyebrow">Quiénes somos</div>
 
         <h2 class="sg-section-title">
-          Surgrass: análisis, manejo y tecnología para el campo del sur
+          Sobre Solution+
         </h2>
 
         <p class="about-desc">
-          Somos un equipo dedicado al manejo de praderas, suelos y cultivos en el sur de Chile.
-          Combinamos experiencia en terreno con análisis profesionales y herramientas modernas
-          para ayudarte a mejorar la productividad y sustentabilidad de tu predio.
+          Solution+ es una empresa orientada al control y optimización de sistemas
+          productivos, integrando servicios de control praderil, lavado industrial
+          y una plataforma digital para la gestión de análisis de suelo y forraje.
         </p>
 
         <p class="about-desc">
-          Nuestro enfoque integra trabajo práctico, diagnósticos claros y un acompañamiento
-          cercano al productor, entregando información útil para decisiones técnicas
-          basadas en datos reales.
+          Nuestro sistema SaaS permite registrar y centralizar los resultados de
+          análisis químicos y de forraje, asociarlos a predios y potreros, y generar
+          mapas de colorimetría a partir de archivos KMZ, facilitando la toma de
+          decisiones mediante visualizaciones claras, tablas con leyendas y reportes
+          en formato PDF.
+        </p>
+
+        <p class="about-desc">
+          Toda la información queda respaldada digitalmente, permitiendo el seguimiento
+          histórico y la descarga de informes técnicos tanto de mapas como de tablas
+          con colorimetría.
         </p>
       </div>
 
       <!-- Columna de imágenes -->
       <div class="about-images">
         <div class="about-img" :style="imgTopStyle"></div>
+        <div class ="about-img" :style="imgMiddleStyle"></div>
         <div class="about-img" :style="imgBottomStyle"></div>
       </div>
 
@@ -37,12 +46,15 @@
 /* Importar imágenes reales */
 import imgAforo from '@/assets/img/aforo-pradera.jpeg';
 import imgVaca from '@/assets/img/cow-volcano.jpeg';
+import imgCultivo from '@/assets/img/cultivo-medicion.jpeg';
 
 /* Igual que HeroSection.vue, creamos estilos dinámicos */
 const imgTopStyle = {
   backgroundImage: `url(${imgAforo})`,
 };
-
+const imgMiddleStyle = {
+  backgroundImage: `url(${imgCultivo}`,
+}
 const imgBottomStyle = {
   backgroundImage: `url(${imgVaca})`,
 };
@@ -75,7 +87,7 @@ const imgBottomStyle = {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 240px;
+  height: 280px;
   box-shadow: var(--sg-shadow-soft);
   border: 1px solid var(--sg-color-border);
 }
