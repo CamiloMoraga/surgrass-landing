@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
 
 /* --------------------------------------------------
-   Variables globales Surgrass
+   Variables globales Solution+
    -------------------------------------------------- */
 :root {
     /* Colores base */
@@ -342,4 +342,121 @@ img {
     .sg-footer-top {
         align-items: flex-start;
     }
+}
+
+/* --------------------------------------------------
+   Formularios (baseline global)
+   -------------------------------------------------- */
+
+.sg-contact {
+    padding-block: var(--sg-section-y);
+    background-color: var(--sg-color-surface);
+}
+
+.sg-contact-form {
+    margin-top: var(--sg-spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sg-spacing-md);
+}
+
+/* Inputs y textarea */
+.sg-contact-form input,
+.sg-contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--sg-font-body);
+    font-size: var(--sg-text-sm);
+    color: var(--sg-color-text);
+
+    background-color: var(--sg-color-surface);
+    border: 1px solid var(--sg-color-border);
+    border-radius: var(--sg-radius-sm);
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sg-contact-form textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 140px;
+}
+
+.sg-contact-form input::placeholder,
+.sg-contact-form textarea::placeholder {
+    color: var(--sg-color-text-muted);
+}
+
+/* Focus */
+.sg-contact-form input:focus,
+.sg-contact-form textarea:focus {
+    outline: none;
+    border-color: var(--sg-color-primary);
+    box-shadow: 0 0 0 3px rgba(45, 122, 61, 0.12);
+}
+
+/* Botón */
+.sg-contact-form button {
+    grid-column: span 2;
+    justify-self: flex-start;
+}
+
+/* Mensajes */
+.success-msg {
+    grid-column: span 2;
+    color: #2e7d32;
+    font-size: var(--sg-text-sm);
+}
+
+.error-msg {
+    grid-column: span 2;
+    color: #c62828;
+    font-size: var(--sg-text-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sg-contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .sg-contact-form textarea,
+    .sg-contact-form button,
+    .success-msg,
+    .error-msg {
+        grid-column: span 1;
+    }
+}
+
+/* --------------------------------------------------
+   Contacto – Card
+   -------------------------------------------------- */
+
+.sg-contact-card {
+    max-width: 520px;
+    margin: 0 auto;
+    background-color: var(--sg-color-surface);
+    padding: var(--sg-spacing-lg);
+    border-radius: var(--sg-radius-md);
+    border: 1px solid var(--sg-color-primary-soft);
+    box-shadow: var(--sg-shadow-soft);
+}
+
+/* Inputs más redondeados */
+.sg-contact-form input,
+.sg-contact-form textarea {
+    border-radius: var(--sg-radius-md);
+}
+
+/* Orden descendente */
+.sg-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sg-spacing-md);
+}
+
+/* Botón centrado */
+.sg-contact-form button {
+    align-self: flex-start;
+    margin-top: var(--sg-spacing-sm);
 }

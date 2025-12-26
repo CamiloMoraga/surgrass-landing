@@ -24,7 +24,7 @@
       <!-- CTA -->
       <div class="services-cta">
         <a
-            href="https://app.surgrass.cl"
+            href="https://app.solution+.cl"
             target="_blank"
             rel="noopener noreferrer"
             class="sg-btn sg-btn--primary"

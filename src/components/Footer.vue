@@ -14,7 +14,7 @@
           <div class="footer-column">
             <h3 class="footer-heading">Contacto</h3>
             <p class="footer-text">
-              Correo: <a href="mailto:contacto@surgrass.cl">contacto@surgrass.cl</a><br />
+              Correo: <a href="mailto:contacto@solution+.cl">contacto@solution+.cl</a><br />
               Región de Los Lagos, Chile.
             </p>
           </div>
@@ -31,7 +31,7 @@
       </div>
 
       <div class="sg-footer-bottom">
-        <span>© {{ new Date().getFullYear() }} Surgrass. Todos los derechos reservados.</span>
+        <span>© {{ new Date().getFullYear() }} Solution+. Todos los derechos reservados.</span>
         <span>Sitio desarrollado por Camilo Moraga.</span>
       </div>
     </div>
