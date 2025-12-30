@@ -2,18 +2,16 @@
   <header class="sg-navbar">
     <div class="sg-container sg-navbar-inner">
       <!-- Logo -->
-      <div class="navbar-left">
-        <a href="#top" class="navbar-logo">
-          <span class="navbar-logo-mark"></span>
-          <span class="navbar-logo-text">Solution+</span>
-        </a>
-      </div>
+      <a href="#top" class="navbar-logo" @click="close">
+        <img src="../assets/img/logo_solution.png" alt="Solution+"/>
+      </a>
 
       <!-- Menú desktop -->
       <nav class="navbar-nav" aria-label="Main navigation">
         <a href="#nosotros" class="navbar-link">Quiénes somos</a>
         <a href="#servicios" class="navbar-link">Servicios</a>
         <a href="#contacto" class="navbar-link">Contacto</a>
+        <a href="#" class="navbar-link navbar-link--external" target="_blank" rel="noopener noreferrer">Mapa colorimetria</a>
       </nav>
 
       <!-- Botón hamburguesa móvil -->
@@ -23,9 +21,9 @@
           @click="isOpen = !isOpen"
           aria-label="Abrir menú"
       >
-        <span class="bar bar-top"></span>
-        <span class="bar bar-middle"></span>
-        <span class="bar bat-bottom"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
     </div>
 
@@ -41,6 +39,9 @@
           </a>
           <a href="#contacto" class="navbar-mobile-link" @click="close">
             Contacto
+          </a>
+          <a href="http://mapa.solution.cl" class="navbar-link navbar-link--external" target="_blank" rel="noopener noreferrer">
+            Mapa colorimetria
           </a>
         </nav>
       </div>
@@ -59,31 +60,17 @@ const close = () => {
 </script>
 
 <style scoped>
-.navbar-left {
-  display: flex;
-  align-items: center;
-}
-
 .navbar-logo {
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
   gap: 0.5rem;
 }
 
-.navbar-logo-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: 10px;
-  background: radial-gradient(circle at 20% 20%, #bbf7d0, #15803d);
-  box-shadow: 0 10px 25px rgba(21, 128, 61, 0.4);
-}
-
-.navbar-logo-text {
-  font-family: var(--sg-font-heading);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  font-size: var(--sg-text-lg);
-  color: var(--sg-color-primary-dark);
+.navbar-logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Menú desktop */
@@ -99,6 +86,18 @@ const close = () => {
   color: var(--sg-color-text-muted);
   font-weight: 500;
   position: relative;
+}
+
+.navbar-link--external {
+  font-weight: 600;
+  color: var(--sg-color-primary-dark);
+}
+
+.navbar-link--external::after {
+  content: '↗';
+  margin-left: 0.35rem;
+  font-size: 0.75em;
+  opacity: 0.6;
 }
 
 .navbar-link::after {
@@ -199,6 +198,10 @@ const close = () => {
 
   .navbar-toggle {
     display: inline-flex;
+  }
+
+  .navbar-logo img {
+    height: 36px;
   }
 }
 </style>

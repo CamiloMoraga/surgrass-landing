@@ -12,14 +12,14 @@
 
         <p class="about-desc">
           Solution+ es una empresa orientada al control y optimización de sistemas
-          productivos, integrando servicios de control praderil, lavado industrial
+          productivos, integrando servicios de control pradera, lavado industrial
           y una plataforma digital para la gestión de análisis de suelo y forraje.
         </p>
 
         <p class="about-desc">
           Nuestro sistema SaaS permite registrar y centralizar los resultados de
           análisis químicos y de forraje, asociarlos a predios y potreros, y generar
-          mapas de colorimetría a partir de archivos KMZ, facilitando la toma de
+          mapas de colorimetría, facilitando la toma de
           decisiones mediante visualizaciones claras, tablas con leyendas y reportes
           en formato PDF.
         </p>
@@ -73,6 +73,9 @@ const imgBottomStyle = {
   color: var(--sg-color-text-muted);
   margin-bottom: 1.25rem;
   line-height: 1.65;
+  text-align: justify;
+  hyphens: auto;
+  text-justify: inter-word;
 }
 
 /* Imágenes */

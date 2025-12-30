@@ -13,12 +13,11 @@
         </div>
 
         <h1 class="sg-hero-title">
-          Control inteligente de praderas,
-          <span class="hero-title-highlight">análisis de suelo y forraje</span>.
+          Gestión y medición de praderas.
         </h1>
 
         <p class="sg-hero-subtitle">
-          Soluciones integrales para el control praderil, lavado industrial y
+          Soluciones integrales para el control pradera, lavado industrial y
           gestión digital de análisis de suelo y forraje.
         </p>
 
@@ -33,7 +32,7 @@
               rel="noopener noreferrer"
               class="sg-btn sg-btn--primary"
           >
-            Ir al sistema Solution+
+            Ir al sistema Surgrass
           </a>
         </div>
 
@@ -65,6 +64,8 @@ const heroBgStyle = {
 .hero-bg {
   position: absolute;
   inset: 0;
+  margin-top: -72px;
+  padding-bottom: 72px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

@@ -245,7 +245,7 @@ img {
    Hero baseline
    -------------------------------------------------- */
 .sg-hero {
-    min-height: calc(100vh - 72px); /* alto pantalla menos navbar */
+    min-height: 100vh; /* alto pantalla menos navbar */
     display: flex;
     align-items: center;
     position: relative;

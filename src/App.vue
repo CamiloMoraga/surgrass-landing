@@ -22,6 +22,6 @@ export default {
 <style>
 main {
   min-height: calc(100vh - 200px);
-  padding-top: 70px; /* deja espacio para navbar fijo */
+  padding-top: 0; /* deja espacio para navbar fijo */
 }
 </style>
