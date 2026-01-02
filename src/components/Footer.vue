@@ -2,16 +2,14 @@
   <footer class="sg-footer">
     <div class="sg-container">
 
-      <!-- Parte superior -->
       <div class="sg-footer-top">
 
-        <!-- Columna izquierda -->
         <div class="footer-left">
           <div class="sg-footer-logo">Solution+</div>
 
           <p class="footer-description">
-            Soluciones integrales para el manejo de praderas, análisis de suelo y
-            forraje, con foco en productores del sur de Chile.
+            Soluciones técnicas de precisión para el sector agroindustrial,
+            especializadas en análisis de recursos y optimización productiva en el sur de Chile.
           </p>
 
           <div class="footer-contact">
@@ -28,32 +26,21 @@
           </div>
         </div>
 
-        <!-- Columna derecha -->
         <div class="footer-right">
           <a
-              href="#"
+              href="https://www.instagram.com/gruposurgrass/"
               class="footer-social footer-social--icon"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
           >
             <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a
-              href="#"
-              class="sg-btn sg-btn--outline footer-app-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            App Solution+
+            <span class="social-label">@gruposurgrass</span>
           </a>
         </div>
 
       </div>
 
-      <!-- Parte inferior -->
       <div class="sg-footer-bottom">
         <span>© 2025 Solution+. Todos los derechos reservados.</span>
         <span>Sitio desarrollado por Camilo Moraga.</span>
@@ -76,6 +63,7 @@
   margin-top: 0.75rem;
   max-width: 420px;
   color: #9ca3af;
+  line-height: 1.6;
 }
 
 .footer-contact,
@@ -89,6 +77,7 @@
 .footer-links a {
   color: #9ca3af;
   font-size: var(--sg-text-sm);
+  transition: color 0.2s;
 }
 
 .footer-links a:hover {
@@ -104,38 +93,24 @@
 }
 
 /* Social */
-.footer-social {
-  font-size: var(--sg-text-sm);
-  color: #9ca3af;
-}
-
 .footer-social--icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1.25rem;
   color: #9ca3af;
+  text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-label {
+  font-size: var(--sg-text-sm);
 }
 
 .footer-social--icon:hover {
   color: #ffffff;
   transform: translateY(-1px);
 }
-
-.footer-social:hover {
-  color: #ffffff;
-}
-
-.footer-app-btn {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
-  background-color: transparent;
-}
-
-.footer-app-btn:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: #ffffff;
-  color: #ffffff;
-}
-
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -146,7 +121,6 @@
   .footer-right {
     align-items: flex-start;
     margin-top: 2rem;
-    gap: 1.25rem;
   }
 }
 </style>

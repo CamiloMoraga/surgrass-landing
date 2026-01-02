@@ -11,8 +11,36 @@
         <a href="#nosotros" class="navbar-link">Quiénes somos</a>
         <a href="#servicios" class="navbar-link">Servicios</a>
         <a href="#contacto" class="navbar-link">Contacto</a>
-        <a href="#" class="navbar-link navbar-link--external" target="_blank" rel="noopener noreferrer">Mapa colorimetria</a>
+
+        <!-- Herramientas -->
+        <a
+            href="#"
+            class="sg-btn sg-btn--outline navbar-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          Mapa de colorimetría
+        </a>
+
+        <a
+            href="https://app.surgrass.cl/"
+            class="sg-btn sg-btn--outline navbar-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          App Surgrass
+        </a>
+
+        <a
+            href="https://www.surgrass.cl/"
+            class="sg-btn sg-btn--primary navbar-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          Plataforma
+        </a>
       </nav>
+
 
       <!-- Botón hamburguesa móvil -->
       <button
@@ -31,19 +59,53 @@
     <transition name="fade-slide-y">
       <div v-if="isOpen" class="navbar-mobile">
         <nav class="navbar-mobile-nav">
+          <!-- Navegación interna -->
           <a href="#nosotros" class="navbar-mobile-link" @click="close">
             Quiénes somos
           </a>
+
           <a href="#servicios" class="navbar-mobile-link" @click="close">
             Servicios
           </a>
+
           <a href="#contacto" class="navbar-mobile-link" @click="close">
             Contacto
           </a>
-          <a href="http://mapa.solution.cl" class="navbar-link navbar-link--external" target="_blank" rel="noopener noreferrer">
-            Mapa colorimetria
+
+          <div class="navbar-mobile-divider"></div>
+
+          <!-- Herramientas -->
+          <a
+              href="#"
+              class="navbar-mobile-link navbar-mobile-link--tool"
+              target="_blank"
+              rel="noopener noreferrer"
+              @click="close"
+          >
+            Mapa de colorimetría
+          </a>
+
+          <a
+              href="https://app.surgrass.cl/"
+              class="navbar-mobile-link navbar-mobile-link--tool"
+              target="_blank"
+              rel="noopener noreferrer"
+              @click="close"
+          >
+            App Surgrass
+          </a>
+
+          <a
+              href="https://www.surgrass.cl/"
+              class="navbar-mobile-link navbar-mobile-link--primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              @click="close"
+          >
+            Plataforma Surgrass
           </a>
         </nav>
+
       </div>
     </transition>
   </header>
@@ -93,11 +155,12 @@ const close = () => {
   color: var(--sg-color-primary-dark);
 }
 
-.navbar-link--external::after {
+.navbar-link--external:hover::after {
   content: '↗';
   margin-left: 0.35rem;
   font-size: 0.75em;
   opacity: 0.6;
+  width: auto;
 }
 
 .navbar-link::after {
@@ -119,6 +182,12 @@ const close = () => {
   width: 100%;
 }
 
+.navbar-btn {
+  margin-left: 0.75rem;
+  font-size: var(--sg-text-sm);
+  padding: 0.45rem 0.9rem;
+}
+
 /* ------------------------------------
    Botón hamburguesa minimalista
    ------------------------------------ */
@@ -128,8 +197,9 @@ const close = () => {
   width: 32px;       /* más pequeño */
   height: 32px;      /* más pequeño */
   border-radius: 50%;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background-color: #ffffff;
+  border: 1px solid var(--sg-color-border);
+  background-color: var(--sg-color-surface);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -137,7 +207,6 @@ const close = () => {
   cursor: pointer;
   flex-direction: column;
   gap: 4px;          /* barras más juntas */
-  -webkit-tap-highlight-color: transparent;
 }
 
 .navbar-toggle:focus,
@@ -146,9 +215,6 @@ const close = () => {
   box-shadow: none !important;
 }
 
-.navbar-toggle::-moz-focus-inner {
-  border: 0 !important;
-}
 
 /* Barras más pequeñas */
 .bar {
@@ -190,6 +256,27 @@ const close = () => {
   transform: translateY(-10px);
 }
 
+.navbar-mobile-divider {
+  height: 1px;
+  background-color: var(--sg-color-border);
+  margin: 0.75rem 0;
+}
+
+/* Herramientas */
+.navbar-mobile-link--tool {
+  font-weight: 600;
+}
+
+/* CTA principal */
+.navbar-mobile-link--primary {
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--sg-color-primary);
+  color: #ffffff;
+  text-align: center;
+}
+
 /* Responsivo */
 @media (max-width: 900px) {
   .navbar-nav {
@@ -202,6 +289,10 @@ const close = () => {
 
   .navbar-logo img {
     height: 36px;
+  }
+
+  .navbar-btn {
+    display: none;
   }
 }
 </style>
