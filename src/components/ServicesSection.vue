@@ -20,7 +20,7 @@
             :class="{ 'is-open': openIndex === 0 }"
             @click="toggle(0)"
         >
-          <h3 class="service-title">Análisis de suelo y forraje</h3>
+          <h3 class="service-title">Gestión de análisis de suelo y forraje</h3>
 
           <div class="service-content">
             <p>

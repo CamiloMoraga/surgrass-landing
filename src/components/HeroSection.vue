@@ -38,7 +38,7 @@
 
         <div class="hero-meta">
           <span>✓ Enfocados en el sur de Chile</span>
-          <span>✓ Mapas y reportes técnicos claros</span>
+          <span>✓ Mapas y reportes técnicos </span>
           <span>✓ Acompañamiento cercano al productor</span>
         </div>
       </div>
