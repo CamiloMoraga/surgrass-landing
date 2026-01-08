@@ -14,21 +14,12 @@
 
         <!-- Herramientas -->
         <a
-            href="#"
+            href="https://surgrass-saas-591297746180.southamerica-west1.run.app/"
             class="sg-btn sg-btn--outline navbar-btn"
             target="_blank"
             rel="noopener noreferrer"
         >
           Mapa de colorimetría
-        </a>
-
-        <a
-            href="https://app.surgrass.cl/"
-            class="sg-btn sg-btn--outline navbar-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-          App Surgrass
         </a>
 
         <a
@@ -76,23 +67,13 @@
 
           <!-- Herramientas -->
           <a
-              href="#"
+              href="https://surgrass-saas-591297746180.southamerica-west1.run.app/"
               class="navbar-mobile-link navbar-mobile-link--tool"
               target="_blank"
               rel="noopener noreferrer"
               @click="close"
           >
             Mapa de colorimetría
-          </a>
-
-          <a
-              href="https://app.surgrass.cl/"
-              class="navbar-mobile-link navbar-mobile-link--tool"
-              target="_blank"
-              rel="noopener noreferrer"
-              @click="close"
-          >
-            App Surgrass
           </a>
 
           <a

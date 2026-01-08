@@ -27,7 +27,7 @@
           </a>
 
           <a
-              href="https://app.solution+.cl"
+              href="https://surgrass-saas-591297746180.southamerica-west1.run.app/"
               target="_blank"
               rel="noopener noreferrer"
               class="sg-btn sg-btn--primary"

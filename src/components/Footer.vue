@@ -37,18 +37,34 @@
             <i class="fa-brands fa-instagram"></i>
             <span class="social-label">@gruposurgrass</span>
           </a>
+
+          <a
+              href="https://app.surgrass.cl/"
+              class="footer-social footer-social--icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="App Surgrass"
+          >
+            <img :src="logoApp" alt="App Surgrass" class="footer-app-icon" />
+            <span class="social-label">App Surgrass</span>
+          </a>
         </div>
 
       </div>
 
       <div class="sg-footer-bottom">
-        <span>© 2025 Solution+. Todos los derechos reservados.</span>
+        <span>© 2026 Solution+. Todos los derechos reservados.</span>
         <span>Sitio desarrollado por Camilo Moraga.</span>
       </div>
 
     </div>
   </footer>
 </template>
+
+<script setup>
+import logoApp from '@/assets/img/logo_app_surgrass-removebg.png';
+</script>
+
 
 <style scoped>
 /* Layout superior */
@@ -89,7 +105,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 /* Social */
@@ -101,6 +117,12 @@
   color: #9ca3af;
   text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-app-icon {
+  width: 24px; /* Ajusta según el diseño de tus iconos de FontAwesome */
+  height: 24px;
+  object-fit: contain;
 }
 
 .social-label {
