@@ -111,7 +111,7 @@ const close = () => {
 }
 
 .navbar-logo img {
-  height: 42px;
+  height: 190px;
   width: auto;
   object-fit: contain;
 }
