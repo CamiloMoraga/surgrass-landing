@@ -14,8 +14,9 @@
 
           <div class="footer-contact">
             <strong>Contacto</strong>
-            <p>Correo: contactosolution.spa@gmail.com</p>
-            <p>Región de Los Lagos, Chile.</p>
+            <p><i class="fa-solid fa-envelope"></i> contactosolution.spa@gmail.com</p>
+            <p><i class="fa-brands fa-whatsapp"></i> +569 20141668</p>
+            <p><i class="fa-solid fa-location-dot"></i> Región de Los Lagos, Chile.</p>
           </div>
 
           <div class="footer-links">

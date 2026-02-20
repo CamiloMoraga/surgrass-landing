@@ -46,6 +46,16 @@
             </a>
           </div>
         </div>
+
+        <div class="service-card" :class="{ 'is-open': openIndex === 4 }" @click="toggle(4)">
+          <h3 class="service-title">Insumos</h3>
+          <div class="service-content">
+            <p>Venta de insumos agrícolas de calidad, específicamente insumos de Cal para mejorar la condición y productividad del suelo.</p>
+            <a href="#contacto" class="sg-btn sg-btn--outline" @click.stop>
+              Cotizar insumos
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 

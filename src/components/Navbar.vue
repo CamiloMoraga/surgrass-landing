@@ -15,11 +15,11 @@
         <!-- Herramientas -->
         <a
             href="https://surgrass-saas-591297746180.southamerica-west1.run.app/"
-            class="sg-btn sg-btn--outline navbar-btn"
+            class="sg-btn sg-btn--primary navbar-btn"
             target="_blank"
             rel="noopener noreferrer"
         >
-          Mapa de colorimetría
+          Colorimetría
         </a>
 
         <a
@@ -28,7 +28,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-          Plataforma
+          Plataforma Surgrass
         </a>
       </nav>
 
@@ -68,12 +68,12 @@
           <!-- Herramientas -->
           <a
               href="https://surgrass-saas-591297746180.southamerica-west1.run.app/"
-              class="navbar-mobile-link navbar-mobile-link--tool"
+              class="navbar-mobile-link navbar-mobile-link--primary"
               target="_blank"
               rel="noopener noreferrer"
               @click="close"
           >
-            Mapa de colorimetría
+            Colorimetría
           </a>
 
           <a
@@ -111,9 +111,15 @@ const close = () => {
 }
 
 .navbar-logo img {
-  height: 190px;
+  height: 150px; /* Tamaño base para móvil (Mobile First) */
   width: auto;
   object-fit: contain;
+}
+
+@media (min-width: 900px) {
+  .navbar-logo img {
+    height: 190px;
+  }
 }
 
 /* Menú desktop */
@@ -266,10 +272,6 @@ const close = () => {
 
   .navbar-toggle {
     display: inline-flex;
-  }
-
-  .navbar-logo img {
-    height: 36px;
   }
 
   .navbar-btn {
