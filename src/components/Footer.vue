@@ -55,7 +55,6 @@
 
       <div class="sg-footer-bottom">
         <span>© 2026 Solution+. Todos los derechos reservados.</span>
-        <span>Sitio desarrollado por Camilo Moraga.</span>
       </div>
 
     </div>
