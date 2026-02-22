@@ -19,7 +19,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-          Colorimetría
+          Surgrass Cromapp
         </a>
 
         <a
@@ -73,7 +73,7 @@
               rel="noopener noreferrer"
               @click="close"
           >
-            Colorimetría
+            Surgrass Cromapp
           </a>
 
           <a
