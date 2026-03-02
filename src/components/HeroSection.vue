@@ -32,7 +32,7 @@
               rel="noopener noreferrer"
               class="sg-btn sg-btn--primary"
           >
-            Ir al sistema Surgrass
+            Ir a Surgrass Cromapp
           </a>
         </div>
 

@@ -60,6 +60,7 @@ import 'swiper/css/pagination';
 import img1 from '@img/showcase-1.jpeg';
 import img2 from '@img/showcase-2.jpeg';
 import img3 from '@img/showcase-3.jpeg';
+import img5 from '@img/showcase-5.jpeg';
 import video1 from '@img/showcase-4.mp4';
 
 const slides = [
@@ -67,6 +68,7 @@ const slides = [
   { type: 'image', src: img1 },
   { type: 'image', src: img2 },
   { type: 'image', src: img3 },
+  { type: 'image', src: img5 },
 ];
 </script>
 
@@ -88,7 +90,7 @@ const slides = [
 .showcase-slide img,
 .showcase-slide video {
   width: 100%;
-  height: 420px;
+  height: 600px;
   object-fit: cover;
   display: block;
   border-radius: var(--sg-radius-md);
@@ -119,7 +121,7 @@ const slides = [
 @media (max-width: 768px) {
   .showcase-slide img,
   .showcase-slide video {
-    height: 260px;
+    height: 400px;
   }
 }
 </style>

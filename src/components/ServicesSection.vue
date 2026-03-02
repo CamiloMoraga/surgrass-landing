@@ -87,11 +87,10 @@ import { ref } from 'vue';
 
 import imgLavado1 from '@img/lavado-1.jpeg';
 import imgLavado2 from '@img/lavado-2.jpeg';
-import imgLavado3 from '@img/lavado-3.jpeg';
 import imgLavado4 from '@img/lavado-4.jpeg';
 import imgLavado5 from '@img/lavado-5.jpeg';
 
-const lavadoImages = [imgLavado1, imgLavado2, imgLavado3, imgLavado4, imgLavado5];
+const lavadoImages = [imgLavado1, imgLavado2, imgLavado4, imgLavado5];
 const openIndex = ref(null);
 const isLightboxOpen = ref(false);
 const activeIndex = ref(0);

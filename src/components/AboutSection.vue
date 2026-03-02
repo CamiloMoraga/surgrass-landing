@@ -18,7 +18,7 @@
 
         <p class="about-desc">
           Nuestro sistema SaaS permite registrar y centralizar los resultados de
-          análisis químicos y de forraje, asociarlos a predios y potreros, y generar
+          análisis de suelo y forraje, asociarlos a predios y potreros, y generar
           mapas de colorimetría, facilitando la toma de
           decisiones mediante visualizaciones claras, tablas con leyendas y reportes
           en formato PDF.

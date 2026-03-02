@@ -29,14 +29,14 @@
 
         <div class="footer-right">
           <a
-              href="https://www.instagram.com/gruposurgrass/"
+              href="https://www.instagram.com/gruposolution/"
               class="footer-social footer-social--icon"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
           >
             <i class="fa-brands fa-instagram"></i>
-            <span class="social-label">@gruposurgrass</span>
+            <span class="social-label">@GrupoSolution</span>
           </a>
 
           <a
